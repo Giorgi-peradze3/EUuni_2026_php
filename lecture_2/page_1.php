@@ -43,7 +43,7 @@
                   </table>";
             } else {
               
-                $calc_salary = $salary / $procentage;
+                $calc_salary = $salary / $procentage * 100;
                 echo "<table border='1' cellpadding='5' style='border-collapse: collapse;'>
                     <tr><th>სახელი</th><td>$name</td></tr>
                     <tr><th>გვარი</th><td>$lastname</td></tr>
