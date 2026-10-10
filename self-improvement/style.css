@@ -1,0 +1,21 @@
+.closed_main{
+    margin: 25px auto;
+    padding: 15px;
+}
+
+.closed_main label input{
+    margin: 10px;
+    padding: auto;
+    border: 1px solid black;
+    min-width: 250px;
+}
+
+.open_main{
+    margin: 25px auto;
+    padding: 15px;
+}
+
+.open_main label input{
+    margin: 10px;
+    padding: auto;
+}
