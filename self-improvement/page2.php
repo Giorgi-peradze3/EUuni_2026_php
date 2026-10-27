@@ -3,21 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Answers</title>
+    <title>შედეგები</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <?php
-    
-    if (isset($_POST['choice'])) {
-        
-        $userChoice = $_POST['choice']; 
-        
-        echo "<h3>თქვენი ტესტი დასრულებულია!</h3>";
-        echo "<p>თქვენი არჩევანი (Value): " . htmlspecialchars($userChoice) . "</p>";
+    if (isset($_POST['user_choice'], $_POST['correct_answer'])) {
+        $userChoice = $_POST['user_choice'];
+        $correctAnswer = $_POST['correct_answer'];
 
-        
-        if (isset($_POST['open'][4])) {
-            echo "<p>მე-4 პასუხი იყო: " . htmlspecialchars($_POST['open'][4]) . "</p>";
+        echo "<h3>ტესტი დასრულებულია!</h3>";
+        echo "<p>თქვენი არჩევანი: " . htmlspecialchars($userChoice) . "</p>";
+
+        if ($userChoice === $correctAnswer) {
+            echo "<p style='color: green;'><strong>სწორია! ყოჩაღ!</strong></p>";
+        } else {
+            echo "<p style='color: red;'><strong>არასწორია. სწორი პასუხი იყო:</strong> " . htmlspecialchars($correctAnswer) . "</p>";
         }
     } else {
         echo "<p>პასუხები არ გადმოცემულა.</p>";
