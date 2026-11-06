@@ -1,0 +1,17 @@
+.block{
+
+    margin: 0 auto;
+    padding: 30px;
+    border: 1px solid black;
+    background-color: silver;
+
+
+}
+
+.block input{
+    margin: 10px;
+}
+
+.block button{
+    margin: 10px;
+}
